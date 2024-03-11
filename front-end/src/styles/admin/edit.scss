@@ -1,0 +1,107 @@
+.edit-product {
+  background-color: #fff;
+  .edit-product-breadcrumb {
+    font-size: 30px;
+  }
+  .product-category-plus {
+    color: var(--primary-color);
+  }
+  .edit-product-form {
+    & + .edit-product-form {
+      margin-left: 2rem;
+      height: fit-content;
+    }
+    .manage-product-content {
+      padding: 2rem;
+      margin: 2rem 0;
+      border: 1px solidvar(--border-color);
+      font-size: 18px;
+    }
+    .edit-product-form-item label {
+      margin-bottom: 5px;
+    }
+  }
+  .edit-product-form-item {
+    input,
+    textarea {
+      border: 1px solid var(--border-color);
+      width: 100%;
+      padding-left: 1rem;
+    }
+    input {
+      height: 50px;
+    }
+    textarea {
+      padding-top: 1rem;
+    }
+  }
+  .product-category {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% + 12px);
+      right: 10px;
+      border: 6px solid transparent;
+      border-color: #aaa transparent transparent transparent;
+      border-top-color: var(--primary-color);
+    }
+    .product-category-label {
+      position: relative;
+      margin-bottom: 5px;
+      &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        color: var(--primary-color);
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+      }
+    }
+    .edit-product-select {
+      width: 100%;
+      height: 50px;
+      padding-left: 20px;
+      color: var(--black-color);
+      border: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      appearance: none;
+    }
+  }
+  .product-image {
+    border: 1px dashed var(--border-color);
+    width: 100%;
+    font-size: 2rem;
+    background-color: #eee;
+    min-height: 300px;
+  }
+
+  a.btn {
+    &:link,
+    &:visited {
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 0.5rem;
+      background-color: orange;
+      padding: 0.5rem 2rem;
+      transition: all 0.3s;
+      color: #fff;
+    }
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  }
+
+  .btn {
+    background-color: orange;
+    border: none;
+    font-weight: 500;
+    width: 100px;
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  }
+}

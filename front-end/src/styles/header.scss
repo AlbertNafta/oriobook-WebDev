@@ -1,0 +1,60 @@
+.header {
+  &.at-home {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  display: flex;
+  justify-content: space-between;
+  padding: 93px 0 30px;
+  .logo {
+    max-width: 152px;
+  }
+  .cart-btn,
+  .search {
+    display: flex;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #eb5e38;
+      transform: translateY(-4px);
+    }
+    span {
+      font-weight: 500;
+    }
+    i {
+      font-size: 20px;
+      margin-right: 8px;
+    }
+  }
+
+  .search-input {
+    display: none;
+    margin-right: 10px;
+    display: none;
+    align-items: center;
+    min-width: 250px;
+    height: 32px;
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  // Number badge for cart
+  .cart-btn {
+    position: relative;
+    #lblCartCount {
+      font-size: 10px;
+      background: #eb5e38;
+      color: #fff;
+      text-align: center;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      line-height: 15px;
+      position: absolute;
+      bottom: -5%;
+      left: -5%;
+    }
+  }
+}

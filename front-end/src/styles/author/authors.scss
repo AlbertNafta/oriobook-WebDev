@@ -1,0 +1,61 @@
+.img-cover {
+  background-image: url("/src/assets/img/bg-shop.jpeg");
+  height: 250px;
+
+  .title-heading {
+    color: #242424;
+    font-size: 35px;
+    grid-area: auto;
+    line-height: 32.3px;
+    text-align: center;
+    font-family: "Lora", Times, serif;
+  }
+}
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.image-position-top {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 30px;
+}
+
+.item-image {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 15px;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+}
+
+.item-title span {
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+
+  &:hover {
+    color: orange;
+  }
+}
+
+.item-title {
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.js-author-container {
+  min-height: 814px;
+}

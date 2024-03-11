@@ -1,0 +1,333 @@
+.order-section{
+  .type-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    h4:not(:first-child) {
+      margin-left: 20px;
+    }
+
+    .underline-animation {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: Lora, serif;
+      padding: 5px;
+      position: relative;
+      cursor: pointer;
+      color: var(--light-black-color);
+      
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px; /* Độ dày của đường gạch chân */
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        transform: scale(0);
+        transition: all 0.3s ease-in-out;
+        background-color: var(--light-black-color);
+      }
+
+      &:hover::before {
+        visibility: visible;
+        transform: scale(1);
+      }
+    }
+
+    .underline-animation.active {
+      color: var(--black-color);
+
+      &::before {
+        transform: unset;
+        visibility: visible;
+        background-color: var(--black-color);
+      }
+
+      &:hover::before {
+        transform: unset;
+        visibility: visible;
+        
+      }
+    }
+  }
+}
+
+.order-section{
+  padding-right: 0 !important;
+  width: 74% !important;
+
+  .each-order:not(:first-child){
+    margin-top: 16px;
+  }
+
+  .title-order-section{
+    border-top: 1px solid #24242498;
+    border-left: 1px solid #242424;
+    border-right: 1px solid #242424;
+    // border-bottom: 1px solid #242424;
+    background-color: #cecece;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 12px;
+
+    p{
+      margin-bottom: 0;
+    }
+
+    .total{
+      // padding-right: 12px;
+    }
+  }
+
+  
+  .order-table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      color: #242424;
+      display: table-cell;
+      font-weight: 500;
+      // grid-area: auto;
+      // line-height: 27.2px;
+      padding: 15px;
+      text-align: left;
+    }
+  
+    th:not(:first-child),
+    td:not(:first-child) {
+      text-align: center;
+    }
+  
+    .product-quantity {
+      display: flex;
+      align-items: center;
+      height: 150px;
+      border: none;
+    }
+  
+    .product-subtotal {
+      padding-bottom: 28px;
+    }
+  
+    td {
+      color: #242424;
+      display: table-cell;
+      font-size: 16px;
+      line-height: 25.5px;
+      padding: 15px;
+      text-align: left;
+  
+      .product-cart-info {
+        color: #242424;
+        display: flex;
+        font-size: 16px;
+        line-height: 25.5px;
+        text-align: left;
+  
+        .product-img {
+          color: #242424;
+          display: inline;
+          font-size: 16px;
+          grid-area: auto;
+          // line-height: 25.5px;
+          text-align: left;
+          height: 120px;
+          width: 100px;
+          aspect-ratio: auto 500/700;
+        }
+  
+        .product-name {
+          color: #242424;
+          font-size: 16px;
+          grid-area: auto;
+          // line-height: 25.5px;
+          margin: 0px 0px 0px 15px;
+          text-align: left;
+        }
+      }
+  
+      .quantity {
+        display: flex;
+        margin: 0 auto;
+        .number {
+          align-items: flex-start;
+          background-color: #ffffff;
+          color: #242424;
+          font-family: Jost;
+          font-size: 16px;
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          padding: 8px;
+        }
+      }
+    }
+  }
+}
+
+.modal-dialog{
+  width: 100%;
+}
+
+.evaluate-btn{
+  flex-grow: 2;
+  display: flex;
+  justify-content: flex-end;
+  .modal-content{
+    .img-rv{
+      width: 65px;
+      height: 65px;
+    }
+
+    ul{
+      display: flex;
+
+      li{
+        margin-left: 4px;
+      }
+
+    }
+  }
+
+  form{
+    // display: flex;
+    // justify-content: space-evenly;
+  }
+
+  #comment{
+    width: 100%;
+  }
+
+  .btn-submit{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    align-self: flex-end;
+    width: 110px;
+  }
+}
+
+.star-widget input {
+  display: none;
+}
+.star-widget label {
+  font-size: 35px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all .2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+  color: #fd4;
+}
+
+input:checked ~ label {
+  color: #fd4;
+  
+}
+
+#rate-1:checked ~ .rating-desc:before {
+  content: "Poor😋";
+}
+#rate-2:checked ~ .rating-desc:before {
+  content: "Not bad";
+}
+#rate-3:checked ~ .rating-desc:before {
+  content: "Average";
+}
+#rate-4:checked ~ .rating-desc:before {
+  content: "Good😋";
+}
+#rate-5:checked ~ .rating-desc:before {
+  content: "Excellent😋";
+}
+
+.rating-desc {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all .2s ease;
+}
+.textarea textarea {
+  border: 1px solid #e4e5e7;
+  background: white;
+  color: #6C6C6E;
+  padding: 22px;
+  font-size: 16px;
+  // margin-top: 15px;
+  letter-spacing: -0.011em;
+  border-radius: 10px;
+  resize: none;
+}
+.textarea textarea:focus {
+  border-color: #36bb91 !important;
+  background: white;
+  color: #1a1a1a;
+  outline: none;
+}
+.btn {
+  // height: 45px;
+  width: 100%;
+  // margin: 15px 0;
+  border: none !important;
+
+}
+
+
+.btn button {
+  height: 100%;
+  width: 60%;
+  // outline: none;
+  background: #36bb91;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 15px;
+  cursor: pointer;
+  // border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.btn button:hover {
+  background: #1a5e49;
+}
+
+.star-rating-bx {
+  background-color: #fff;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 40px;
+}
+@media (max-width:576px) {
+  .star-rating-bx {
+      padding:20px 15px;
+  }
+}
+
+.star-icon {
+  padding-bottom: 20px;
+}
+.modal-title {
+  font-weight: 600;
+}
+#error-comment,
+#error-rating {
+  color: red;
+}
+
+#error-rating{
+  padding-top: 55px;
+}
+
+.no-show{
+  display: none;
+}
